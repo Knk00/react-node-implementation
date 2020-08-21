@@ -13,6 +13,18 @@ class Counter extends Component {
 
 	//dynamic object : state
 
+	componentDidUpdate(preProps, PrevState) {
+		console.log('Pre-Props', preProps);
+		console.log('Prev-State', PrevState);
+		if (preProps.counter.value !== this.props.counter.value) {
+			//Ajax call and get new data from the server
+		}
+	}
+
+	componentWillUnmount() {
+		console.log('Umounted');
+	}
+
 	render() {
 		// console.log('props', this.props);
 		return (
